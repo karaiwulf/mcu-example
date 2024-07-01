@@ -1,0 +1,19 @@
+[package]
+name = "mcu-example"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+debug = false
+strip = true
+lto = true
+opt-level = "s"
+codegen-units = 1
+
+[dependencies]
+cortex-m = "0.7.7"
+feather_m0 = { version = "0.14.0", features = ["usb"] }
+panic-halt = "0.2.0"
+unicode_names2_macros = "1.1.0"
+usb-device = "0.3.2"
+usbd-serial = "0.2.2"
